@@ -21,10 +21,6 @@ s = "hello, world"
 s.sub!(/\w+/) {|word| word.upcase }
 puts s
 
-line = "From cba6174ab03bb7dda6de82c7fc6a98f61b27397e Mon Sep 17 00:00:00 2001"
-puts "match test!"
-p line.match(/From ([a-z|0-9]+)/)
-
 
 #begin
 #    File.foreach("/home/marikoyos/wk/2015-15/patches/android-5.1.1_r13/frameworks/av/0009-DO-NOT-MERGE-libstagefright-sanity-check-si.bulletin.patch") do |line|
@@ -104,6 +100,8 @@ for vul in vul_list do
     change_info = get_change_info(patch_path)
     puts "change_info:"
     p change_info
+    patch_path = "./android-4.4.4_r2.0.1/bootable/recovery/0001-XXXXX"
+    patch_path = "./android-6.0/system/core/0001-libXX"
     branch_dir, project_dir = get_branch_from_path(patch_path)
     branch_dir = "androit-5.0.1_r1"
     str = branch_dir.match(/(android-[0-9]+-[0-9]+)/)
